@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">hw3</string>
+    <color name="maroon">#FF4C0909</color>
+    <color name="gold">#EFC97F</color>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string-array name="tips_array">
+        <item>15% Tip</item>
+        <item>18% Tip</item>
+        <item>20% Tip</item>
+        <item>Custom Tip</item>
+    </string-array>
+</resources>

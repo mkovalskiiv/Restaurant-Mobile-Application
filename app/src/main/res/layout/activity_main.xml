@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maroon"
+    android:backgroundTint="#4C0909"
+    android:foregroundTint="#2B0707"
+    android:foregroundTintMode="src_in"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/txtCallUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:foregroundTint="#BD3434"
+        android:text="Call us: 999-999-9999"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-medium"
+        android:foregroundTint="#BD3434"
+        android:text="285 Old Westport Road"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="20sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+    <TextView
+        android:id="@+id/txtAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-medium"
+        android:foregroundTint="#BD3434"
+        android:text="North Dartmouth, MA, 02747"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="20sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="334dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#3E0C0C"
+        android:foregroundTint="#BD3434"
+        android:text="Welcome to the HW3 Restaurant!"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="34sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/txtHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:foregroundTint="#BD3434"
+        android:text="Open 11AM – 9PM"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="16sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <ImageView
+        android:id="@+id/mk_watermark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/mk_watermark" />
+
+    <ImageView
+        android:id="@+id/imageRestaurantSplash"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426"
+        app:srcCompat="@drawable/restaurant" />
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="324dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:onClick="button_GotoMenu"
+        android:text="View Menu"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="154dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:onClick="button_GotoMaps"
+        android:text="Open Maps"
+        android:textColor="#450A0A"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="154dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:onClick="button_Share"
+        android:text="Share"
+        android:textColor="#450A0A"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

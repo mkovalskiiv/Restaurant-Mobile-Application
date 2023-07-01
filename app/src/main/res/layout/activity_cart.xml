@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CartActivity">
+
+    <!-- start of toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ToolBar widget -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFC97F"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Restaurant App"
+                app:titleTextColor="#450A0A" />
+
+            <!-- Mid-Right TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoCart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoOrders"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_cart" />
+
+
+            <!-- Right most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoOrders"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoOrders"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_orders" />
+
+            <!-- Left most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:onClick="button_GotoMain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_home" />
+
+            <!-- Mid-Left TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:onClick="button_GotoMenu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoCart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- end of toolbar -->
+
+    <ListView
+        android:id="@+id/lstItemList"
+        android:layout_width="155dp"
+        android:layout_height="205dp"
+        android:textAlignment="center"
+        android:textColor="@color/gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <TextView
+        android:id="@+id/txtCartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:text="CART"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <Button
+        android:id="@+id/btnMenu2"
+        android:layout_width="324dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:onClick="button_GotoMenu"
+        android:text="Edit Items"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <Button
+        android:id="@+id/btnSubmitOrder"
+        android:layout_width="324dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:onClick="button_SubmitOrder"
+        android:text="Finalize Order"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <ImageView
+        android:id="@+id/mk_watermark3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/mk_watermark" />
+
+    <ListView
+        android:id="@+id/lstPriceList"
+        android:layout_width="155dp"
+        android:layout_height="205dp"
+        android:foregroundGravity="right"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <TextView
+        android:id="@+id/txtSubtotal"
+        android:layout_width="328dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Subtotal: $0.00"
+        android:textAlignment="viewEnd"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lstPriceList" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="328dp"
+        android:layout_height="25dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Total: $0.00"
+        android:textAlignment="viewEnd"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Spinner
+        android:id="@+id/spnTips"
+        android:layout_width="212dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <EditText
+        android:id="@+id/edittxtCustomTip"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Enter Tip"
+        android:inputType="numberSigned"
+        android:text="20.0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerItemList"
+        android:layout_width="332dp"
+        android:layout_height="206dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

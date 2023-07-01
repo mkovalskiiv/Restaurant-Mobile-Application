@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maroon"
+    tools:context=".MenuActivity">
+
+    <!-- start of toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ToolBar widget -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFC97F"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Restaurant App"
+                app:titleTextColor="#450A0A" />
+
+            <!-- Mid-Right TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoCart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoOrders"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_cart" />
+
+
+            <!-- Right most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoOrders"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoOrders"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_orders" />
+
+            <!-- Left most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:onClick="button_GotoMain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_home" />
+
+            <!-- Mid-Left TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:onClick="button_GotoMenu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoCart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- end of toolbar -->
+
+    <Button
+        android:id="@+id/btnBurgerAdd"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center|center_horizontal"
+        android:onClick="button_BurgerAdd"
+        android:text="+"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399" />
+
+    <Button
+        android:id="@+id/btnHotDogAdd"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center|center_horizontal"
+        android:onClick="button_HotDogAdd"
+        android:text="+"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
+
+    <Button
+        android:id="@+id/btnHotDogRemove"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center|center_horizontal"
+        android:onClick="button_HotDogRemove"
+        android:text="-"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
+
+    <Button
+        android:id="@+id/btnBurgerRemove"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#EFC97F"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center|center_horizontal"
+        android:onClick="button_BurgerRemove"
+        android:text="-"
+        android:textColor="#450A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399" />
+
+    <TextView
+        android:id="@+id/txtMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:text="MENU"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="96sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/txtBurgerPrice"
+        android:layout_width="127dp"
+        android:layout_height="16dp"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:text="Cheeseburger: $6.00"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="12sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <TextView
+        android:id="@+id/txtNumBurger"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="20sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.399" />
+
+    <TextView
+        android:id="@+id/txtNumHotDog"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="20sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
+
+    <TextView
+        android:id="@+id/txtHotDogPrice"
+        android:layout_width="127dp"
+        android:layout_height="16dp"
+        android:backgroundTint="#3E0C0C"
+        android:fontFamily="sans-serif-black"
+        android:foregroundTint="#BD3434"
+        android:text="Hot Dog: $3.00"
+        android:textAlignment="center"
+        android:textColor="#EFC97F"
+        android:textSize="12sp"
+        app:drawableTint="#652424"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <ImageView
+        android:id="@+id/mk_watermark2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/mk_watermark" />
+
+    <ImageView
+        android:id="@+id/imageBurger"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383"
+        app:srcCompat="@drawable/burger" />
+
+    <ImageView
+        android:id="@+id/imageHotDog"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676"
+        app:srcCompat="@drawable/hotdog" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fltbtnCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="button_GotoCart"
+        app:backgroundTint="#EFC97F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922"
+        tools:srcCompat="@drawable/toolbar_cart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="351dp"
+        android:layout_height="501dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

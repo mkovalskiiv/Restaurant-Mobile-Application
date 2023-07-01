@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrdersActivity">
+
+    <!-- start of toolbar -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ToolBar widget -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFC97F"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Restaurant App"
+                app:titleTextColor="#450A0A" />
+
+            <!-- Mid-Right TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoCart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoOrders"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_cart" />
+
+
+            <!-- Right most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoOrders"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:onClick="button_GotoOrders"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_orders" />
+
+            <!-- Left most TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:onClick="button_GotoMain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_home" />
+
+            <!-- Mid-Left TextView -->
+            <ImageView
+                android:id="@+id/txtviewGotoMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:clickable="true"
+                android:onClick="button_GotoMenu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtviewGotoCart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/toolbar_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/txtOrdersTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIST OF ORDERS"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerOrdersList"
+        android:layout_width="377dp"
+        android:layout_height="427dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
+
+    <Button
+        android:id="@+id/btnDeleteAllOrders"
+        android:layout_width="351dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#AE2A2A"
+        android:onClick="button_deleteAllOrders"
+        android:text="Delete All Orders"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <Button
+        android:id="@+id/btnDeleteSingleOrder"
+        android:layout_width="250dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#BA5D7E"
+        android:onClick="button_deleteSingleOrder"
+        android:text="Delete Single Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <EditText
+        android:id="@+id/edittxtOrderToDelete"
+        android:layout_width="93dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:editable="true"
+        android:ems="10"
+        android:hint="Order ID#"
+        android:inputType="numberSigned|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+    <!-- end of toolbar -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
